@@ -4,11 +4,11 @@ document.getElementById("cadastro-admin-form").addEventListener("submit", functi
     const usuario = document.getElementById("usuario-cadastro").value;
     const senha = document.getElementById("senha-cadastro").value;
 
-    fetch("https://<SEU-NOME-DO-BANCO>.restdb.io/rest/administradores", {
+    fetch("https://vestibularb-c6f2.restdb.io/rest/administrador?max=2", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "x-apikey": "<SUA-API-KEY>"
+            "x-apikey": "9c549e27cfe91b4251c8cfc0fea1fa058a163"
         },
         body: JSON.stringify({ usuario, senha })
     })
