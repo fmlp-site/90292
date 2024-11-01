@@ -5,11 +5,11 @@ document.getElementById("cadastro-form").addEventListener("submit", function(eve
     const cpf = document.getElementById("cpf").value;
     const idInscricao = "ID" + Math.floor(Math.random() * 100000);
 
-    fetch("https://<SEU-NOME-DO-BANCO>.restdb.io/rest/candidatos", {
+    fetch("https://https://vestibularb-c6f2.restdb.io/rest/candidatos?max=2", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "x-apikey": "<SUA-API-KEY>"
+            "x-apikey": "9c549e27cfe91b4251c8cfc0fea1fa058a163"
         },
         body: JSON.stringify({ nome, cpf, idInscricao })
     })
