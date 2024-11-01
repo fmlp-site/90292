@@ -6,36 +6,14 @@
     <title>Login do Candidato</title>
 </head>
 <body>
-    <h2>Login do Candidato</h2>
+    <h1>Login do Candidato</h1>
     <form id="form-login">
         <label for="idInscricao">ID de Inscrição:</label>
         <input type="text" id="idInscricao" required><br><br>
-
+        
         <button type="submit">Entrar</button>
     </form>
 
-    <script>
-        document.getElementById("form-login").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            const idInscricao = document.getElementById("idInscricao").value;
-
-            fetch(`https://vestibularb-c6f2.restdb.io/rest/candidatos?max=2?q={"idInscricao":"${idInscricao}"}`, {
-                headers: {
-                    "x-apikey": "9c549e27cfe91b4251c8cfc0fea1fa058a163"
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.length > 0) {
-                    alert("Login realizado com sucesso!");
-                    window.location.href = "paineldocandidato.html"; // Redireciona para o painel do candidato
-                } else {
-                    alert("ID de inscrição incorreto. Tente novamente.");
-                }
-            })
-            .catch(error => console.error("Erro:", error));
-        });
-    </script>
+    <script src="login.js"></script>
 </body>
 </html>
